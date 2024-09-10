@@ -734,7 +734,7 @@
     },
     "sandpaper": {
       "Package": "sandpaper",
-      "Version": "0.16.6",
+      "Version": "0.16.7",
       "Source": "Repository",
       "Repository": "https://carpentries.r-universe.dev",
       "Requirements": [
@@ -763,7 +763,7 @@
         "withr",
         "yaml"
       ],
-      "Hash": "766498aa0c35795e431003acb08f28c6"
+      "Hash": "8db7ce7ac8fa18fc2eb949456284652d"
     },
     "sass": {
       "Package": "sass",
