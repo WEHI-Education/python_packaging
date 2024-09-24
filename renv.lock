@@ -190,13 +190,13 @@
     },
     "curl": {
       "Package": "curl",
-      "Version": "5.2.2",
+      "Version": "5.2.3",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
         "R"
       ],
-      "Hash": "8f27335f2bcff4d6035edcc82d7d46de"
+      "Hash": "d91263322a58af798f6cf3b13fd56dde"
     },
     "desc": {
       "Package": "desc",
@@ -297,7 +297,7 @@
     },
     "gert": {
       "Package": "gert",
-      "Version": "2.1.1",
+      "Version": "2.1.2",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -308,7 +308,7 @@
         "sys",
         "zip"
       ],
-      "Hash": "ab2ca7d6bd706ed218d096b7b16d7233"
+      "Hash": "347d104ed332650b737f509a703c9c7f"
     },
     "gh": {
       "Package": "gh",
@@ -512,19 +512,22 @@
     },
     "openssl": {
       "Package": "openssl",
-      "Version": "2.2.1",
+      "Version": "2.2.2",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
         "askpass"
       ],
-      "Hash": "c62edf62de70cadf40553e10c739049d"
+      "Hash": "d413e0fef796c9401a4419485f709ca1"
     },
     "pegboard": {
       "Package": "pegboard",
       "Version": "0.7.6",
       "Source": "Repository",
       "Repository": "https://carpentries.r-universe.dev",
+      "RemoteUrl": "https://github.com/carpentries/pegboard",
+      "RemoteRef": "0.7.6",
+      "RemoteSha": "ad2542f7f7b9c3f90cc871b355ff81ec14a09ca9",
       "Requirements": [
         "R6",
         "commonmark",
@@ -567,7 +570,7 @@
     },
     "pkgdown": {
       "Package": "pkgdown",
-      "Version": "2.1.0",
+      "Version": "2.1.1",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -593,7 +596,7 @@
         "xml2",
         "yaml"
       ],
-      "Hash": "0d3d789055c873f48521ce7e23c23f48"
+      "Hash": "df2912d5873422b55a13002510f02c9f"
     },
     "processx": {
       "Package": "processx",
@@ -737,6 +740,9 @@
       "Version": "0.16.7",
       "Source": "Repository",
       "Repository": "https://carpentries.r-universe.dev",
+      "RemoteUrl": "https://github.com/carpentries/sandpaper",
+      "RemoteRef": "0.16.7",
+      "RemoteSha": "d566e2dd87540195e1b4e856f82ace8ad975346c",
       "Requirements": [
         "assertthat",
         "callr",
@@ -849,6 +855,8 @@
       "Version": "0.2.0.9000",
       "Source": "Repository",
       "Repository": "https://carpentries.r-universe.dev",
+      "RemoteUrl": "https://github.com/ropensci/tinkr",
+      "RemoteSha": "8a57235f7072dbcb7eb22516290c58b692a9c015",
       "Requirements": [
         "R6",
         "commonmark",
