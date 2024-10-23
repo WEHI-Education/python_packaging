@@ -354,12 +354,14 @@
         
 <section id="aio-01-scripts-and-modules"><p>Content from <a href="01-scripts-and-modules.html">Python Scripts and Modules</a></p>
 <hr>
-<p>Last updated on 2024-10-22 |
+<p>Last updated on 2024-10-23 |
 
         <a href="https://github.com/carpentries-incubator/python_packaging/edit/main/episodes/01-scripts-and-modules.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
+<p>TODO: Add an episode 0 with discussion on when to write a python
+package and what makes for a good tool</p>
 <div class="overview card">
 <h2 class="card-header">Overview</h2>
 <div class="row g-0">
@@ -1034,6 +1036,8 @@ where the module is stored on our file system, which can make it
 difficult to reuse the functions in a separate project. A simple
 solution is to set the <code>PYTHONPATH</code> environment variable on
 our system. On Linux machines, this can be achieved using:</p>
+<p>TODO: Add an example here where we change dir and then try to import
+a module. This will fail without setting python path.</p>
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1148,6 +1152,7 @@ now.</p>
 <a class="anchor" aria-label="anchor" href="#extra-better-scripting-with-argparse"></a>
 </h2>
 <hr class="half-width">
+<p>TODO: split arg parsing off into a separate episode</p>
 <p>We showed earlier how to maintain script-like functionality in our
 modules. We’ll update that code to include our updated plotting
 function, so we’ll automatically save to a file if the user runs our
@@ -1368,7 +1373,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-02-packages"><p>Content from <a href="02-packages.html">From Modules to Packages</a></p>
 <hr>
-<p>Last updated on 2024-10-22 |
+<p>Last updated on 2024-10-23 |
 
         <a href="https://github.com/carpentries-incubator/python_packaging/edit/main/episodes/02-packages.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1492,6 +1497,7 @@ but Recovered individuals do not gain immunity to the pathogen, and
 instead return to the Susceptible population (this can apply to the
 common cold and some types of flu). These new modules should be added to
 the package directory:</p>
+<p>TODO: Scrub unimplemented models to reduce complexity</p>
 <p><code> 📁 epi_models<br> |<br> |____📦 epi_models<br>      |<br>
      |____📜 __init__.py<br>      |____📜 SIR.py<br>      |____📜
 SEIR.py<br>      |____📜 SIS.py<br></code></p>
@@ -1615,6 +1621,8 @@ be avoided in our plain scripts.</p>
 mark a directory as a Python package, but if we wish, we can use them to
 control what is or isn’t visible at package-level scope, or to perform
 any additional setup.</p>
+<p>TODO: This needs an interactive exercise. What happens without
+importing anything in <strong>init</strong>?</p>
 <p>Consider the <code>__init__.py</code> file in the <code>models</code>
 directory. Let’s add the following lines:</p>
 <div class="codewrapper sourceCode" id="cb9">
@@ -1725,13 +1733,11 @@ fine:</p>
   File "&lt;stdin&gt;", line 1, in &lt;module&gt;
 NameError: name 'SIS_model' is not defined</code></pre>
 </div>
-<div id="private-variables-in-python" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<div id="private-variables-in-python" class="callout-inner">
-<h3 class="callout-title">‘Private’ variables in Python</h3>
-<div class="callout-content">
+<p>TODO: remove discussion of private variables ::::::::::::::::::::::
+discussion</p>
+<div class="section level3">
+<h3 id="private-variables-in-python">‘Private’ variables in Python<a class="anchor" aria-label="anchor" href="#private-variables-in-python"></a>
+</h3>
 <p>It is common for Python programmers to mark objects as private by
 prefixing their names with an underscore. For example,
 <code>_private_variable</code> or <code>_PrivateClass</code>. For an
@@ -1751,8 +1757,7 @@ built-in object:</p>
 <p>A combination of the private naming convention, well chosen
 <code>__all__</code> variables, and thorough documentation is more than
 sufficient to specify a public API.</p>
-</div>
-</div>
+<p>::::::::::::::::::::::::::::::</p>
 </div>
 </section><section><h2 class="section-heading" id="script-like-packages-and-the-__main__-py-file">Script-like Packages and the <code>__main__.py</code> file<a class="anchor" aria-label="anchor" href="#script-like-packages-and-the-__main__-py-file"></a>
 </h2>
@@ -1893,6 +1898,7 @@ sophisticated command line interfaces.</p>
 <a class="anchor" aria-label="anchor" href="#extra-advanced-argparse-in-__main__-py"></a>
 </h2>
 <hr class="half-width">
+<p>TODO: Remove advanced argparse?</p>
 <p>Let’s return to <code>plot_SIR.py</code>, and apply the enhancements
 discussed in the ‘extra’ sections last lesson:</p>
 <div class="codewrapper sourceCode" id="cb25">
@@ -2255,12 +2261,16 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-03-building-and-installing"><p>Content from <a href="03-building-and-installing.html">Building and Installing Packages using setuptools</a></p>
 <hr>
-<p>Last updated on 2024-10-22 |
+<p>Last updated on 2024-10-23 |
 
         <a href="https://github.com/carpentries-incubator/python_packaging/edit/main/episodes/03-building-and-installing.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
+<p>TODO: Migrate setuptools to hatch TODO: Remove refs to setup.py TODO:
+Remove venv, explictly use conda envs TODO: modify package structure to
+nest within src dir TODO: update black to ruff TODO: pip install in
+editable mode TODO: New section: Write pytest tests</p>
 <div class="overview card">
 <h2 class="card-header">Overview</h2>
 <div class="row g-0">
@@ -3085,12 +3095,15 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-04-history-of-packaging"><p>Content from <a href="04-history-of-packaging.html">Extra: A History of Python Build Tools</a></p>
 <hr>
-<p>Last updated on 2024-10-22 |
+<p>Last updated on 2024-10-23 |
 
         <a href="https://github.com/carpentries-incubator/python_packaging/edit/main/episodes/04-history-of-packaging.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
+<p>TODO: Decide what to do with this section. Suggest heavy cull. Keep
+only pyproject.toml and hatch. Mention hatch alternatives like
+setuptools and poetry.</p>
 <div class="overview card">
 <h2 class="card-header">Overview</h2>
 <div class="row g-0">
@@ -3696,12 +3709,16 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-05-publishing"><p>Content from <a href="05-publishing.html">Publishing our Python Packages</a></p>
 <hr>
-<p>Last updated on 2024-10-22 |
+<p>Last updated on 2024-10-23 |
 
         <a href="https://github.com/carpentries-incubator/python_packaging/edit/main/episodes/05-publishing.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
+<p>TODO: replace build and twine with hatch. local build with hatch.
+demo push to test-pypi. TODO: pip install from github TODO: vcs based
+versioning with git tags and hatch (like setuptools-vcs) TODO: Update
+github action to use hatch and push to test-pypi</p>
 <div class="overview card">
 <h2 class="card-header">Overview</h2>
 <div class="row g-0">
@@ -4856,9 +4873,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://carpentries-incubator.github.io/python_packaging/aio.html",
   "identifier": "https://carpentries-incubator.github.io/python_packaging/aio.html",
-  "dateCreated": "2024-10-22",
-  "dateModified": "2024-10-22",
-  "datePublished": "2024-10-22"
+  "dateCreated": "2024-10-23",
+  "dateModified": "2024-10-23",
+  "datePublished": "2024-10-23"
 }
 
   </script><script>

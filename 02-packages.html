@@ -323,7 +323,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>From Modules to Packages</h1>
-        <p>Last updated on 2024-10-22 |
+        <p>Last updated on 2024-10-23 |
 
         <a href="https://github.com/carpentries-incubator/python_packaging/edit/main/episodes/02-packages.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -448,6 +448,7 @@ but Recovered individuals do not gain immunity to the pathogen, and
 instead return to the Susceptible population (this can apply to the
 common cold and some types of flu). These new modules should be added to
 the package directory:</p>
+<p>TODO: Scrub unimplemented models to reduce complexity</p>
 <p><code> 📁 epi_models<br> |<br> |____📦 epi_models<br>      |<br>
      |____📜 __init__.py<br>      |____📜 SIR.py<br>      |____📜
 SEIR.py<br>      |____📜 SIS.py<br></code></p>
@@ -567,6 +568,8 @@ be avoided in our plain scripts.</p>
 mark a directory as a Python package, but if we wish, we can use them to
 control what is or isn’t visible at package-level scope, or to perform
 any additional setup.</p>
+<p>TODO: This needs an interactive exercise. What happens without
+importing anything in <strong>init</strong>?</p>
 <p>Consider the <code>__init__.py</code> file in the <code>models</code>
 directory. Let’s add the following lines:</p>
 <div class="codewrapper sourceCode" id="cb9">
@@ -675,13 +678,10 @@ fine:</p>
   File "&lt;stdin&gt;", line 1, in &lt;module&gt;
 NameError: name 'SIS_model' is not defined</code></pre>
 </div>
-<div id="private-variables-in-python" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<div id="private-variables-in-python" class="callout-inner">
-<h3 class="callout-title">‘Private’ variables in Python</h3>
-<div class="callout-content">
+<p>TODO: remove discussion of private variables ::::::::::::::::::::::
+discussion</p>
+<div class="section level3">
+<h3 id="private-variables-in-python">‘Private’ variables in Python<a class="anchor" aria-label="anchor" href="#private-variables-in-python"></a></h3>
 <p>It is common for Python programmers to mark objects as private by
 prefixing their names with an underscore. For example,
 <code>_private_variable</code> or <code>_PrivateClass</code>. For an
@@ -701,8 +701,7 @@ built-in object:</p>
 <p>A combination of the private naming convention, well chosen
 <code>__all__</code> variables, and thorough documentation is more than
 sufficient to specify a public API.</p>
-</div>
-</div>
+<p>::::::::::::::::::::::::::::::</p>
 </div>
 </section><section><h2 class="section-heading" id="script-like-packages-and-the-__main__-py-file">Script-like Packages and the <code>__main__.py</code> file<a class="anchor" aria-label="anchor" href="#script-like-packages-and-the-__main__-py-file"></a></h2>
 <hr class="half-width"><p>In the previous lesson, we introduced the
@@ -839,7 +838,8 @@ sophisticated command line interfaces.</p>
 </section><section><h2 class="section-heading" id="extra-advanced-argparse-in-__main__-py">Extra: Advanced <code>argparse</code> in
 <code>__main__.py</code>
 <a class="anchor" aria-label="anchor" href="#extra-advanced-argparse-in-__main__-py"></a></h2>
-<hr class="half-width"><p>Let’s return to <code>plot_SIR.py</code>, and apply the enhancements
+<hr class="half-width"><p>TODO: Remove advanced argparse?</p>
+<p>Let’s return to <code>plot_SIR.py</code>, and apply the enhancements
 discussed in the ‘extra’ sections last lesson:</p>
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1254,9 +1254,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://carpentries-incubator.github.io/python_packaging/02-packages.html",
   "identifier": "https://carpentries-incubator.github.io/python_packaging/02-packages.html",
-  "dateCreated": "2024-10-22",
-  "dateModified": "2024-10-22",
-  "datePublished": "2024-10-22"
+  "dateCreated": "2024-10-23",
+  "dateModified": "2024-10-23",
+  "datePublished": "2024-10-23"
 }
 
   </script><script>

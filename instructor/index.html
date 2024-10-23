@@ -389,10 +389,50 @@ Carpentires</a>.</p>
 information that may be of interest to some learners. These sections do
 not need to be covered in order to understand the core content of the
 course.</p>
-<!--
+<p>TODO: Updated setup instructions</p>
+<section><h2 class="section-heading" id="windows">Windows<a class="anchor" aria-label="anchor" href="#windows"></a></h2>
+<hr class="half-width"><ul><li>Install GitBash</li>
+<li>Install miniforge</li>
+</ul><p>Windows checks:</p>
+<ul><li>Open GitBash</li>
+<li>Check for (base) and conda version</li>
+<li>If base not present, open miniforge prompt and run
+<code>conda init bash</code>
+</li>
+</ul></section><section><h2 class="section-heading" id="mac">Mac<a class="anchor" aria-label="anchor" href="#mac"></a></h2>
+<hr class="half-width"><ul><li>Install miniforge</li>
+</ul><p>Mac checks:</p>
+<ul><li>git –version</li>
+<li>conda version</li>
+</ul></section><section><h2 class="section-heading" id="vs-code-setup">VS Code setup<a class="anchor" aria-label="anchor" href="#vs-code-setup"></a></h2>
+<hr class="half-width"><p>Install VS Code</p>
+<p>Windows users: - Open VS Code and set GitBash as default terminal</p>
+<p>Install Extensions: - python language support - git lens - remote ssh
+- github pull requests - ruff</p>
+</section><section><h2 class="section-heading" id="conda-config">Conda config<a class="anchor" aria-label="anchor" href="#conda-config"></a></h2>
+<hr class="half-width"><p>conda update -n base -c conda-forge conda</p>
+<p>TODO: Check for other recommended settings</p>
+</section><section><h2 class="section-heading" id="git-config">Git config<a class="anchor" aria-label="anchor" href="#git-config"></a></h2>
+<hr class="half-width"><p>Set global variables: - name - email - default editor</p>
+</section><section><h2 class="section-heading" id="create-github-account">Create Github account<a class="anchor" aria-label="anchor" href="#create-github-account"></a></h2>
+<hr class="half-width"><ul><li>create ssh key and add to github account</li>
+<li>test key wit ssh -T <a href="mailto:git@github.com" class="email">git@github.com</a>
+</li>
+</ul></section><section><h2 class="section-heading" id="create-env-for-this-workshop">Create env for this workshop<a class="anchor" aria-label="anchor" href="#create-env-for-this-workshop"></a></h2>
+<hr class="half-width"><p>Clone demo project repo + all branches</p>
+<p>New conda env from env.yml</p>
+<p><code>conda env create -f environment.yml</code></p>
+<p>conda env list</p>
+<p>cleanup tarballs etc</p>
+<p>activate env</p>
+<p>Check packages with conda list</p>
+</section><div class="section level1">
+<h1 id="create-pypi-account">Create Pypi account<a class="anchor" aria-label="anchor" href="#create-pypi-account"></a></h1>
+<p>may need to create token to link to github <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
+ --></p>
+</div>
 
 
       </section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
@@ -443,9 +483,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://carpentries-incubator.github.io/python_packaging/instructor/index.html",
   "identifier": "https://carpentries-incubator.github.io/python_packaging/instructor/index.html",
-  "dateCreated": "2024-10-22",
-  "dateModified": "2024-10-22",
-  "datePublished": "2024-10-22"
+  "dateCreated": "2024-10-23",
+  "dateModified": "2024-10-23",
+  "datePublished": "2024-10-23"
 }
 
   </script><script>
