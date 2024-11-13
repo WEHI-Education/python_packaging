@@ -227,7 +227,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="03-building-and-installing.html">3. Building and Installing Packages using setuptools</a>
+        <a href="03-building-and-installing.html">3. Building and Installing Packages using hatch</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -236,16 +236,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="04-history-of-packaging.html">4. Extra: A History of Python Build Tools</a>
-    </div><!--/div.accordion-header-->
-
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush6">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading6">
-        <a href="05-publishing.html">5. Publishing our Python Packages</a>
+        <a href="04-publishing.html">4. Publishing our Python Packages</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -335,7 +326,7 @@ packages?
 </td>
 <td>
  3. <a href="03-building-and-installing.html">Building and Installing
-Packages using setuptools</a>
+Packages using hatch</a>
 </td>
 <td>
 How can we manage our Python environment?<br>How can we install our own
@@ -345,26 +336,14 @@ packages?
 <span class="visually-hidden">Duration: </span>01h 02m
 </td>
 <td>
- 4. <a href="04-history-of-packaging.html">Extra: A History of Python
-Build Tools</a>
-</td>
-<td>
-Why have the ‘best practices’ for building and installing
-Python<br>packages changed so much of the years?<br>What problems has
-each new iteration solved?
-</td>
-</tr><tr><td>
-<span class="visually-hidden">Duration: </span>01h 32m
-</td>
-<td>
- 5. <a href="05-publishing.html">Publishing our Python Packages</a>
+ 4. <a href="04-publishing.html">Publishing our Python Packages</a>
 </td>
 <td>
 What services can we use to publish our software?<br>What steps must we
 take to accomplish this?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>02h 02m
+<span class="visually-hidden">Duration: </span>01h 32m
 </td>
 <td>
 Finish
@@ -389,53 +368,99 @@ Carpentires</a>.</p>
 information that may be of interest to some learners. These sections do
 not need to be covered in order to understand the core content of the
 course.</p>
-<p>TODO: Updated setup instructions</p>
-<section><h2 class="section-heading" id="windows">Windows<a class="anchor" aria-label="anchor" href="#windows"></a></h2>
-<hr class="half-width"><ul><li>Install GitBash</li>
-<li>Install miniforge</li>
-</ul><p>Windows checks:</p>
-<ul><li>Open GitBash</li>
-<li>Check for (base) and conda version</li>
-<li>If base not present, open miniforge prompt and run
-<code>conda init bash</code>
+<section><h2 class="section-heading" id="python-environments">Python environments<a class="anchor" aria-label="anchor" href="#python-environments"></a></h2>
+<hr class="half-width"><p>In this workshop we will use <code>conda</code> to manage Python
+environments and install packages.</p>
+<p>Our preferred flavour of <code>conda</code> is provided by
+Miniforge3, but you could also use Miniconda.</p>
+<div class="section level3">
+<h3 id="windows">Windows<a class="anchor" aria-label="anchor" href="#windows"></a></h3>
+<p>Windows users will need to install <code>GitBash</code> which is a
+linux-like terminal that comes pre-installed with Git. You will use
+<code>conda</code> from within the <code>GitBash</code> shell.</p>
+<p>Install: - <a href="https://gitforwindows.org/" class="external-link">GitBash</a> - <a href="https://conda-forge.org/miniforge/" class="external-link">Miniforge3</a></p>
+<p>Windows checks:</p>
+<ul><li>Open the <code>GitBash</code> terminal app.</li>
+<li>Check for <code>(base)</code> prefix in your prompt.</li>
+<li>If <code>(base)</code> is not present, open the “miniforge prompt”
+app and run <code>conda init bash</code>
 </li>
-</ul></section><section><h2 class="section-heading" id="mac">Mac<a class="anchor" aria-label="anchor" href="#mac"></a></h2>
-<hr class="half-width"><ul><li>Install miniforge</li>
-</ul><p>Mac checks:</p>
-<ul><li>git –version</li>
-<li>conda version</li>
-</ul></section><section><h2 class="section-heading" id="vs-code-setup">VS Code setup<a class="anchor" aria-label="anchor" href="#vs-code-setup"></a></h2>
-<hr class="half-width"><p>Install VS Code</p>
+<li>Run <code>conda --version</code>
+</li>
+</ul></div>
+<div class="section level3">
+<h3 id="mac">Mac<a class="anchor" aria-label="anchor" href="#mac"></a></h3>
+<p>Install: - <a href="https://conda-forge.org/miniforge/" class="external-link">Miniforge3</a></p>
+<p>Mac checks:</p>
+<ul><li>Open a terminal and run <code>git --version</code>. You may be
+prompted to install git.</li>
+<li>Run <code>conda --version</code>
+</li>
+</ul></div>
+</section><section><h2 class="section-heading" id="configure-git">Configure Git<a class="anchor" aria-label="anchor" href="#configure-git"></a></h2>
+<hr class="half-width"><p>If you are setting up Git for the first time, you will need to set
+your user name and email.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> git config <span class="at">--global</span> user.name <span class="st">"Alfredo Linguini"</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="ex">$</span> git config <span class="at">--global</span> user.email <span class="st">"a.linguini@ratatouille.fr"</span></span></code></pre>
+</div>
+<p>Please use your own name and email address instead of Alfredo’s. And
+make sure you use the same email associated with your GitHub
+account.</p>
+<p>We will also set the default editor as <code>nano</code>.</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">$</span> git config <span class="at">--global</span> core.editor <span class="st">"nano -w"</span></span></code></pre>
+</div>
+</section><section><h2 class="section-heading" id="setup-github">Setup Github<a class="anchor" aria-label="anchor" href="#setup-github"></a></h2>
+<hr class="half-width"><div class="section level3">
+<h3 id="create-a-github-account">Create a GitHub account<a class="anchor" aria-label="anchor" href="#create-a-github-account"></a></h3>
+<p>Create a new account at <a href="../github.com%7D">GitHub.com</a> if you
+do not have one.</p>
+<p>Use an email address that you will always have access to (not a work
+or university address)</p>
+</div>
+<div class="section level3">
+<h3 id="configure-ssh-access">Configure SSH access<a class="anchor" aria-label="anchor" href="#configure-ssh-access"></a></h3>
+<p>If you do not have ssh set up for git <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" class="external-link">create
+a new ssh key</a> and <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account" class="external-link">add
+the key</a> to your github account.</p>
+<p>On windows you should do this from the GitBash shell.</p>
+<p>To test that your key is correctly configured run:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-T</span> git@github.com</span></code></pre>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="vs-code-setup">VS Code setup<a class="anchor" aria-label="anchor" href="#vs-code-setup"></a></h2>
+<hr class="half-width"><p>VS Code is a popular Interactive Development Environment (IDE) that
+we will use to edit our project.</p>
+<p>Install: - <a href="https://code.visualstudio.com/Download" class="external-link">VS
+Code</a></p>
 <p>Windows users: - Open VS Code and set GitBash as default terminal</p>
-<p>Install Extensions: - python language support - git lens - remote ssh
-- github pull requests - ruff</p>
-</section><section><h2 class="section-heading" id="conda-config">Conda config<a class="anchor" aria-label="anchor" href="#conda-config"></a></h2>
-<hr class="half-width"><p>conda update -n base -c conda-forge conda</p>
-<p>TODO: Check for other recommended settings</p>
-</section><section><h2 class="section-heading" id="git-config">Git config<a class="anchor" aria-label="anchor" href="#git-config"></a></h2>
-<hr class="half-width"><p>Set global variables: - name - email - default editor</p>
-</section><section><h2 class="section-heading" id="create-github-account">Create Github account<a class="anchor" aria-label="anchor" href="#create-github-account"></a></h2>
-<hr class="half-width"><ul><li>create ssh key and add to github account</li>
-<li>test key wit ssh -T <a href="mailto:git@github.com" class="email">git@github.com</a>
-</li>
-</ul></section><section><h2 class="section-heading" id="create-env-for-this-workshop">Create env for this workshop<a class="anchor" aria-label="anchor" href="#create-env-for-this-workshop"></a></h2>
-<hr class="half-width"><p>Clone demo project repo + all branches</p>
-<p>New conda env from env.yml</p>
-<p><code>conda env create -f environment.yml</code></p>
-<p>conda env list</p>
-<p>cleanup tarballs etc</p>
-<p>activate env</p>
-<p>Check packages with conda list</p>
-</section><div class="section level1">
-<h1 id="create-pypi-account">Create Pypi account<a class="anchor" aria-label="anchor" href="#create-pypi-account"></a></h1>
-<p>may need to create token to link to github <!--
+<p>VS Code has a marketplace of community developed extensions. Here are
+a few that you may find useful when working on Python projects.</p>
+<p>Optional extensions: - python language support - git lens - remote
+ssh - github pull requests - ruff</p>
+</section><section><h2 class="section-heading" id="create-test-pypi-account">Create Test-Pypi account<a class="anchor" aria-label="anchor" href="#create-test-pypi-account"></a></h2>
+<hr class="half-width"><p>PyPi is the Python Package Index, it hosts publically available
+python packages.</p>
+<p>We will practice uploading packages on a clone of PyPi called
+<code>test-pypi</code>.</p>
+<p>Setup your test-pypi account: - Set up a new account on <a href="https://test.pypi.org/" class="external-link">test.pypi.org</a> - Confirm your email
+address. - Set up 2-factor authentication.</p>
+</section><section><h2 class="section-heading" id="creat-project-repo">Creat project repo<a class="anchor" aria-label="anchor" href="#creat-project-repo"></a></h2>
+<hr class="half-width"><p>Create a new repo in your github account called
+<code>learn-hatch</code> and clone it to your local machine.</p>
+<p>Tutor to discuss <code>.gitignore</code> and licences. <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></p>
-</div>
-
-
-      </section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
+</section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link float-end" href="../instructor/01-scripts-and-modules.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
@@ -483,9 +508,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://carpentries-incubator.github.io/python_packaging/instructor/index.html",
   "identifier": "https://carpentries-incubator.github.io/python_packaging/instructor/index.html",
-  "dateCreated": "2024-10-23",
-  "dateModified": "2024-11-12",
-  "datePublished": "2024-11-12"
+  "dateCreated": "2024-11-13",
+  "dateModified": "2024-11-13",
+  "datePublished": "2024-11-13"
 }
 
   </script><script>
