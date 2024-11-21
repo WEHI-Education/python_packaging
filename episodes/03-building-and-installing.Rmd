@@ -575,7 +575,7 @@ This indicates that `pip` should install any version of `numpy` greater than 1.2
 that any version of `pyyaml` will do. If our installed `numpy` version is less than
 1.20, or if it isn't installed at all, `pip` will upgrade to the latest version that's
 compatible with the rest of our installed packages and our Python version. We'll cover
-software versioning in more detail in the [lesson on publishing](05-publishing.Rmd), but
+software versioning in more detail in the [lesson on publishing](04-publishing.Rmd), but
 now we'll simply cover some ways to specify which software versions we need:
 
 ```toml
