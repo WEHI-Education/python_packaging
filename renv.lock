@@ -740,7 +740,7 @@
       "Package": "sandpaper",
       "Version": "0.16.10.9000",
       "Source": "Repository",
-      "Repository": "carpentries_archive",
+      "Repository": "carpentries",
       "Requirements": [
         "assertthat",
         "callr",
