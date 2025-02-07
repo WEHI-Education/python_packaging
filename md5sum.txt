@@ -12,4 +12,4 @@
 "instructors/instructor-notes.md" "60b93493cf1da06dfd63255d73854461" "site/built/instructor-notes.md" "2025-02-07"
 "learners/setup.md" "b9ed8b6071f4fae247fda30e47eeae18" "site/built/setup.md" "2025-02-07"
 "profiles/learner-profiles.md" "60b93493cf1da06dfd63255d73854461" "site/built/learner-profiles.md" "2025-02-07"
-"renv/profiles/lesson-requirements/renv.lock" "a2758a36acbf94e269ca69d15c174171" "site/built/renv.lock" "2025-02-07"
+"renv/profiles/lesson-requirements/renv.lock" "128f7160038e3f03b8c79d3206dc590c" "site/built/renv.lock" "2025-02-07"
