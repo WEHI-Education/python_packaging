@@ -2,13 +2,12 @@
 # Values for this lesson.
 #------------------------------------------------------------
 
-# Which carpentry is this (swc, dc, lc, or cp)?
-# swc: Software Carpentry
-# dc: Data Carpentry
-# lc: Library Carpentry
-# cp: Carpentries (to use for instructor traning for instance)
-# incubator: The Carpentries Incubator
-carpentry: incubator
+# Which carpentry is this (swc, dc, lc, or cp)? < REPLACED with UNIMELB institutes >
+# uom: University of Melbourne
+# mb: Melbourne Bioinformatics
+# mig: Melbourne Integrative Genomics
+# wehi: Walter and Eliza Hall Institute
+carpentry: 'wehi'
 
 # Overall title for pages.
 title: Python Packaging
@@ -33,7 +32,7 @@ source: https://github.com/carpentries-incubator/python_packaging/
 branch: main
 
 # Who to contact if there are any issues
-contact: liam.pattinson@york.ac.uk
+contact: adam.taranto@unimelb.edu.au
 
 # Navigation ------------------------------------------------
 # 
@@ -68,4 +67,15 @@ instructors:
 
 # Learner Profiles
 profiles: 
+
+# Customisation ---------------------------------------------
+#
+# This space below is where custom yaml items (e.g. pinning
+# sandpaper and varnish versions) should live
+
+analytics: carpentries
+lang: en
+
+# This is the MB varnish, which is a custom version of the Carpentries varnish
+varnish: 'melbournebioinformatics/uom-varnish@main'
 
