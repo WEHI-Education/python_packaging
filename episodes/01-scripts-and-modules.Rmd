@@ -22,6 +22,8 @@ exercises: 2
 
 ## Python as a Scripting Language
 
+TODO: Cull text 
+
 Python is frequently used as a _scripting language_ by scientists and engineers due to
 its expressiveness, simplicity, and its rich ecosystem of third-party libraries. There
 isn't a hard line between a scripting language and a non-scripting language, but some
@@ -648,37 +650,9 @@ if __name__ == "__main__":
 ```
 An issue with our example is that it still requires the user to manually edit the file
 if they wish to change the input or outputs.  This problem can be solved by instead
-taking arguments from the command line. A simple interface can be created using
-`sys.argv`, which is a list of command line arguments in the form of strings:
+taking arguments from the command line.
 
-```python
-# file: SIR_model.py
-import sys
-
-def main():
-    # Note: sys.argv[0] is the name of our program!
-    pop_size = int(sys.argv[1])
-    beta = float(sys.argv[2])
-    gamma = float(sys.argv[3])
-    days = int(sys.argv[4])
-    I_0 = int(sys.argv[5])
-    output = sys.argv[6]
-
-    S, I, R = SIR_model(
-        pop_size=pop_size,
-        beta=beta,
-        gamma=gamma,
-        days=days,
-        I_0=I_0,
-    )
-    plot_SIR_model(S, I, R, save_to=output)
-
-if __name__ == "__main__":
-    main()
-```
-
-However, this requires the user to provide every argument in order, and doesn't allow
-default arguments. We can achieve a better interface using the built-in `argparse`
+We can achieve a better interface using the built-in `argparse`
 library. The comments in the code below explain how this works:
 
 ```python
