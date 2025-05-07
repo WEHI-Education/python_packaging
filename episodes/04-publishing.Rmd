@@ -747,7 +747,7 @@ We can test the distribution of our package by uploading to TestPyPI.
 First we will need to create a "token" on test-pypi to use as a temporary password.
 
 ```bash
-$ hatch publish --repo testpypi --user __token__ --auth <your_token_here>
+$ hatch publish --repo https://test.pypi.org/legacy/ --user __token__ --auth pypi-token-here
 ```
 
 To avoid entering you token on the cmd line you can provide details as env variables
