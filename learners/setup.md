@@ -117,6 +117,15 @@ Setup your test-pypi account:
 
 ## Create project repo
 
+TODO: Create github template with init script + license + .gitignore
+
 Create a new repo in your github account called `learn-hatch` and clone it to your local machine.
 
 Tutor to discuss `.gitignore` and licences.
+
+
+## Create Conda env
+
+TODO: create new conda env.yml to include in template repo
+
+- inc biopython, seaborn
