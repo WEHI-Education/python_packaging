@@ -410,6 +410,7 @@ following, which excludes the enhancements added in the 'extra' section last les
 # file: plot_SIR.py
 
 import matplotlib.pyplot as plt
+from ..models.SIR import SIR_model
 
 def plot_SIR_model(S, I, R):
     """
